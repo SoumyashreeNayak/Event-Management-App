@@ -1,0 +1,40 @@
+{
+  "employee": [
+    {
+      "firstname": "Soumyashree",
+      "lastname": "Nayak",
+      "email": "soumyashree15012001@gmail.com",
+      "id": "sn21"
+    },
+    {
+      "id": "am22",
+      "firstname": "Mihir",
+      "lastname": "Ahuja",
+      "email": "ahujam2gmail.com"
+    },
+    {
+      "id": "tk23",
+      "firstname": "Tushar",
+      "lastname": "Kant",
+      "email": "tkant20@gmail.com"
+    },
+    {
+      "id": "sr24",
+      "firstname": "Subhasmita",
+      "lastname": "Rout",
+      "email": "routsubha29@gmail.com"
+    },
+    {
+      "id": "kn25",
+      "firstname": "Khitish",
+      "lastname": "Nayak",
+      "email": "knayak51@gmail.com"
+    },
+    {
+      "id": "a030",
+      "firstname": "Kriti",
+      "lastname": "Priya",
+      "email": "pkriti22@gmail.com"
+    }
+  ]
+}

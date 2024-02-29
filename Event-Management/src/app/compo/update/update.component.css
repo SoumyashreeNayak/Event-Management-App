@@ -1,0 +1,9 @@
+.maindiv{
+      margin-top: 20px;
+      background-color: aliceblue;
+      padding:15px;
+      border-radius: 10px;
+}
+.alert{
+      margin-top:3px;
+}

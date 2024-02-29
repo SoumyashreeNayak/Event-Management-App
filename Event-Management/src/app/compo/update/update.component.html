@@ -1,0 +1,51 @@
+<app-adminheader></app-adminheader>
+<div class="container">
+      <div class="maindiv">
+            <div class="row">
+                  <div class=" justify-content-center">
+                        <h3>Update Employee {{employee.id}}</h3><br>
+                        <form #updateemp="ngForm" (ngSubmit)="onSubmit(updateemp)" >
+                              <div class="row">
+                                    <div class="col-6">
+                                          <div class="form-group">
+                                                <label for="firsrname">First Name :
+                                                      <input type="text" name="firstname" class="form-control" placeholder="First Name" [(ngModel)]="employee.firstname"
+                                                      required minlength="5" ngModel #firstname="ngModel">
+                                                      <div *ngIf="firstname.invalid && firstname.touched" class="alert">
+                                                            <span *ngIf="firstname.errors?.['required']">First name Musted Entred</span>
+                                                            <span *ngIf="firstname.errors?.['minlength']">First Name Must Be above 5 Characters</span>
+                                                      </div>
+                                                </label>
+                                          </div><br>
+                                          <div class="form-group">
+                                                <label for="lastname">Last Name :
+                                                      <input type="text" name="lastname" class="form-control" placeholder="Last Name" [(ngModel)]="employee.lastname"
+                                                      required minlength="5" ngModel #lastname="ngModel">
+                                                      <div *ngIf="lastname.invalid &&  lastname.touched" class="alert">
+                                                            <span *ngIf="lastname.errors?.['required']">Last Name Musted Entred</span>
+                                                            <span *ngIf="lastname.errors?.['minlength']">Last Name Must Be above 5 Characters</span>
+                                                      </div>
+                                                </label>
+                                          </div>
+                                    </div>
+                                    <div class="col-6">
+                                          <div class="form-group">
+                                                <label for="email">Email :
+                                                      <input type="email" name="email" class="form-control" placeholder="Email" [(ngModel)]="employee.email"
+                                                      required minlength="5" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel #email="ngModel">
+                                                      <div *ngIf="email.invalid &&  email.touched" class="alert">
+                                                            <span *ngIf="email.errors?.['required']">Email Musted Entred</span>
+                                                            <span *ngIf="email.errors?.['pattern']">Invalid Email</span>
+                                                      </div>
+                                                </label>
+                                          </div><br><br>
+                                          <div class="form-group">
+                                                <button class="btn btn-primary" [disabled]="updateemp.invalid">Update Employee</button>
+                                          </div>
+                                    </div>
+                              </div>
+                        </form>
+                  </div>
+            </div>
+      </div>
+</div>

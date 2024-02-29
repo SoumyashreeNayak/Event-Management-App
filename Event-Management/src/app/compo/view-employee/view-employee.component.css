@@ -1,0 +1,19 @@
+#close:hover{
+    cursor: pointer;
+    color:red;
+    font-size: large;
+}
+#close{
+      color:rgb(2, 9, 88);
+      font-size: medium;
+}
+.main{
+     margin: 40px;
+     /* width:max-content; */
+     border-radius: 10px;
+     padding: 20px;
+     background-color:  aliceblue;;
+}
+input[type="text"], [type="email"]{
+    border:"none";
+}

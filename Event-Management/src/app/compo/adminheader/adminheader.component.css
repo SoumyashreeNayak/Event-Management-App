@@ -1,0 +1,14 @@
+.maindiv{
+      margin-top: 20px;
+      background-color: aliceblue;
+      padding:15px;
+      border-radius: 10px;
+}
+input[type="text"]{
+      width:230px;
+      float: right;
+}
+a{
+      text-decoration: none;
+}
+

@@ -1,0 +1,29 @@
+<app-adminheader></app-adminheader>
+<div class="container">
+      <div class="maindiv">
+           <div class="row">
+                  <div class="col">
+                        <button (click)="addemp()" class="btn btn-primary">Add Employee</button>
+                  </div><br><br>
+           </div>
+           <div class="row">
+                  <h3>All Employees</h3>
+                  <div class="col table-responsive"><br>
+                        <table class="table table-bordered">
+                              <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>View</th>
+                              </tr>
+                              <tr *ngFor="let emp of employee1;">
+                                   <td>{{emp.id}}</td>
+                                   <td>{{emp.firstname}}</td>
+                                   <td>{{emp.lastname}}</td>
+                                   <td><a class="btn btn-primary" routerLink="{{emp.id}}">View Details</a></td>
+                              </tr>
+                        </table>
+                  </div>
+           </div>
+      </div>
+</div>

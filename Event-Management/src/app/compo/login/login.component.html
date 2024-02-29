@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="">
+      <div class="row">
+        <div class="col"></div>
+          <div class="col-6">
+            <div class="container adminfrom">
+              <form #adminform="ngForm" (ngSubmit)="submit(adminform)">
+                <div class="form-group">
+                  <label for="Username">Username:
+                    <input type="text" placeholder="username" name="username" class="form-control"
+                    required minlength="5" ngModel #username="ngModel">
+                    <div class="alert" *ngIf="username.touched && username.invalid">
+                      <span *ngIf="username.errors?.['required']">Enter Username</span>
+                      <span *ngIf="username.errors?.['minlength']">Must Have 5 Characters</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password:
+                    <input type="password" placeholder="password" name="password" class="form-control"
+                    required minlength="5" ngModel #password="ngModel">
+                    <div class="alert" *ngIf="password.touched && password.invalid">
+                      <span *ngIf="password.errors?.['required']">Enter Password</span>
+                      <span *ngIf="password.errors?.['minlength']">Must Have 5 Characters</span>
+                    </div>
+                  </label>
+                </div><br>
+                <button class="btn btn-primary" [disabled]="adminform.invalid">Login</button>
+              </form>
+                <p *ngIf=status>Invalid  Credentials! Try Again.</p>
+            </div>
+          </div>
+        <div class="col"></div>
+      </div>
+    </div>
